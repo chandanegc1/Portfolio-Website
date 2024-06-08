@@ -9,7 +9,7 @@ const Home = () => {
     <Wrapper>
     <div className="content">
     {
-      arr.map((item)=><ProjectIcons hoverImage={item.initialImg} initialImg={item.hoverImage} Name={item.name}/> )
+      arr.map((item)=><ProjectIcons hoverImage={item.initialImg} initialImg={item.hoverImage} Name={item.name} Link={item.link}/> )
     }
     </div>
     

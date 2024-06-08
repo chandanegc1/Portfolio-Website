@@ -4,10 +4,10 @@ const Wrapper = styled.article`
     width: 35px;
     height: 35px;
     cursor: pointer;
-    transition: transform 0.4s;
+    transition: transform 0.3s;
 }
 .main-box .box img:hover{
-    transform: scale(4);
+    transform: scale(3);
 }
 `;
 

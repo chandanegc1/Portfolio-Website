@@ -3,7 +3,8 @@ import styled from "styled-components"
 const Wrapper = styled.article`
  .content{
    display: flex;
-   padding: 20px;
+   padding: 40px;
+   justify-content:space-between;
  }
  .navbar{
   position: fixed;
