@@ -10,11 +10,6 @@ const Wrapper = styled.article`
 a{
    text-decoration: none;
 }
-body , html{
-   margin: 0;
-   padding: 0;
-}
-
 .main-header {
    width: 100vw;
    display: flex;

@@ -4,8 +4,6 @@ import Wrapper from '../styles/Home'
 const Home = () => {
   return (
     <Wrapper>
-      <html>
-  <body>
     <div class="container">
         <div className="header">
         <header className="main-header">
@@ -20,8 +18,6 @@ const Home = () => {
         </header>
         </div>
     </div>
-</body>
-</html>
     </Wrapper>
   )
 }
