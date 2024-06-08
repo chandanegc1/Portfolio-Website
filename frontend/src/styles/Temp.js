@@ -1,12 +1,6 @@
 import styled from "styled-components"
 
 const Wrapper = styled.article`
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   color: black;
-}
 a{
    text-decoration: none;
 }

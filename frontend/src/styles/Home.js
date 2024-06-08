@@ -1,12 +1,14 @@
-import React from 'react'
-import NavBarBottom from '../components/NavBarBottom'
+import styled from "styled-components"
 
-const Home = () => {
-  return (
-    <>
-    <NavBarBottom/>
-    </>
-  )
-}
-
-export default Home 
+const Wrapper = styled.article`
+ .content{
+   display: flex;
+   padding: 20px;
+ }
+ .navbar{
+  position: fixed;
+  bottom: 15px;
+ }
+ 
+`;
+export default Wrapper; 

@@ -7,15 +7,16 @@ const Wrapper = styled.article`
    color: black;
    font-family: "BIGPixelRegular", Courier, "Courier New", monospace;
    font-size: 20px;
-   font-weight: bold;
 }
  .header h3{
   position: fixed;
   left: 0;
 }
 .main-header{
+  width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .main-header a{
   text-decoration: none;
@@ -34,6 +35,17 @@ const Wrapper = styled.article`
  .main-header nav ul li a:hover{
   color:red ;
  }
+
+ @media (max-width: 800px) {
+   .main-header nav{
+      width: 90vw;
+    }
+}
+ @media (max-width: 1000px) {
+   .main-header nav{
+      width: 70vw;
+    }
+}
 
 `;
 export default Wrapper;

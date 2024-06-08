@@ -1,11 +1,23 @@
 import React from 'react'
 import NavBarBottom from '../components/NavBarBottom'
+import ProjectIcons from '../components/ProjectIcons'
+import { arr } from '../utils/constants'
+import Wrapper from '../styles/Home'
 
 const Home = () => {
   return (
-    <>
-    <NavBarBottom/>
-    </>
+    <Wrapper>
+    <div className="content">
+    {
+      arr.map((item)=><ProjectIcons hoverImage={item.initialImg} initialImg={item.hoverImage} Name={item.name}/> )
+    }
+    </div>
+    
+    <div className="navbar">
+      <NavBarBottom/>
+    </div>
+    
+    </Wrapper>
   )
 }
 

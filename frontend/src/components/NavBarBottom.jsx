@@ -10,10 +10,10 @@ const NavBarBottom = () => {
         <h3>INFO</h3>
             <nav>
                 <ul>
-                    <li><a href="#home">CHRONOLOGICAL</a></li>
-                    <li><a href="#services">PROGRAMMATIC</a></li>
-                    <li><a href="#about">SCALE</a></li>
-                    <li><a href="#contact">STATUS</a></li>
+                    <li><a href="#chronological">CHRONOLOGICAL</a></li>
+                    <li><a href="#programmatic">PROGRAMMATIC</a></li>
+                    <li><a href="#scale">SCALE</a></li>
+                    <li><a href="#status">STATUS</a></li>
                 </ul>
             </nav>
         </header> 
