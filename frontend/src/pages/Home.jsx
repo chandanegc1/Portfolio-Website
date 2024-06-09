@@ -1,24 +1,23 @@
-import React from 'react'
-import NavBarBottom from '../components/NavBarBottom'
-import ProjectIcons from '../components/ProjectIcons'
-import arr  from '../utils/constants'
-import Wrapper from '../styles/Home'
+import React from "react";
+import NavBarBottom from "../components/NavBarBottom";
+import { arr, arr1 } from "../utils/constants";
+import Wrapper from "../styles/Home";
+import Status from "../components/IconGroup";
 
 const Home = () => {
   return (
     <Wrapper>
-    <div className="content">
-    { 
-      arr.map((item)=><ProjectIcons hoverImage={item.initialImg} initialImg={item.hoverImage} Name={item.name} Link={item.link}/> )
-    }
-    </div>
-    
-    <div className="navbar">
-      <NavBarBottom/>
-    </div>
-    
+      <div className="full-destop">
+        <Status Name="IDEA" arr={arr} />
+        <Status Name="INOVATION" arr={arr1} />
+        <Status Name="CUNSTRUCTION" arr={arr1} />
+        <Status Name="COMPLETE" arr={arr1} />
+      </div>
+      <div className="navbar">
+        <NavBarBottom />
+      </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
