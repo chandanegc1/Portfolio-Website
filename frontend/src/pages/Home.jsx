@@ -1,18 +1,17 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import NavBarBottom from "../components/NavBarBottom";
-import { arr, arr1 } from "../utils/constants";
 import Wrapper from "../styles/Home";
-import Status from "../components/IconGroup";
+import Status from "../components/Status";
+import Chronological from "../components/Chronological";
+import { MyContext } from "../contextAPI/ContexApi";
+import Scale from "../components/Scale";
+import Programmatic from "../components/Programmatic";
 
 const Home = () => {
+  const {item} = useContext(MyContext);
   return (
     <Wrapper>
-      <div className="full-destop">
-        <Status Name="IDEA" arr={arr} />
-        <Status Name="INOVATION" arr={arr1} />
-        <Status Name="CUNSTRUCTION" arr={arr1} />
-        <Status Name="COMPLETE" arr={arr1} />
-      </div>
+      {item==="STATUS"?<Status/>:item==="CHRONOLOGICAL"?<Chronological/>:item==="SCALE"?<Scale/>:item==="PROGRAMMATIC"?<Programmatic/>:<Chronological/>}
       <div className="navbar">
         <NavBarBottom />
       </div>

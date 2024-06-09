@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectIcons from "./ProjectIcons";
 import Wrapper from "../styles/IconGroup";
-const Status = ({ Name, arr }) => {
+const IconGroup = ({ Name, arr }) => {
   return (
     <Wrapper>
       <div className="destop-content">
@@ -23,4 +23,4 @@ const Status = ({ Name, arr }) => {
   );
 };
 
-export default Status;
+export default IconGroup;

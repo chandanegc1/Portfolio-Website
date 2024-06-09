@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Wrapper from "../styles/NavBarBottom.js";
+import { MyContext } from "../contextAPI/ContexApi.js";
 
 const NavBarBottom = () => {
+  const {item , setItem} = useContext(MyContext);
+  console.log(item);
+  const handleClick = (e)=>{
+    setItem(e);
+  }
   return (
     <Wrapper>
       <div class="container">
@@ -10,17 +16,17 @@ const NavBarBottom = () => {
             <h3>INFO</h3>
             <nav>
               <ul>
-                <li>
-                  <a href="#chronological">CHRONOLOGICAL</a>
+                <li className={item==="CHRONOLOGICAL"?"color-red":null} onClick={()=>handleClick("CHRONOLOGICAL")}>
+                  CHRONOLOGICAL
                 </li>
-                <li>
-                  <a href="#programmatic">PROGRAMMATIC</a>
+                <li className={item==="PROGRAMMATIC"?"color-red":null} onClick={()=>handleClick("PROGRAMMATIC")}>
+                  PROGRAMMATIC
                 </li>
-                <li>
-                  <a href="#scale">SCALE</a>
+                <li className={item==="SCALE"?"color-red":null} onClick={()=>handleClick("SCALE")}>
+                 SCALE
                 </li>
-                <li>
-                  <a href="#status">STATUS</a>
+                <li className={item==="STATUS"?"color-red":null} onClick={()=>handleClick("STATUS")}>
+                 STATUS
                 </li>
               </ul>
             </nav>

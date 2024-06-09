@@ -35,6 +35,12 @@ const Wrapper = styled.article`
   .main-header nav ul li a:hover {
     color: red;
   }
+  .main-header nav ul li{
+    cursor: pointer;
+  }
+  .color-red{
+    color: red;
+  }
 
   @media (max-width: 800px) {
     .main-header nav {
