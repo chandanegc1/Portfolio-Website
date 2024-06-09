@@ -4,7 +4,8 @@ const Wrapper = styled.article`
  .content{
    display: flex;
    padding: 40px;
-   justify-content:space-between;
+   justify-content:space-around;
+   flex-wrap: wrap;
  }
  .navbar{
   position: fixed;
