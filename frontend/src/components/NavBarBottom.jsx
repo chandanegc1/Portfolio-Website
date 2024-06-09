@@ -1,26 +1,40 @@
-import React from 'react'
-import Wrapper from "../styles/NavBarBottom.js"
+import React, { useContext, useState } from "react";
+import Wrapper from "../styles/NavBarBottom.js";
+import { MyContext } from "../contextAPI/ContexApi.js";
 
 const NavBarBottom = () => {
+  const {item , setItem} = useContext(MyContext);
+  console.log(item);
+  const handleClick = (e)=>{
+    setItem(e);
+  }
   return (
     <Wrapper>
-    <div class="container">
-      <div className="header">
-        <header className="main-header">
-        <h3>INFO</h3>
+      <div class="container">
+        <div className="header">
+          <header className="main-header">
+            <h3>INFO</h3>
             <nav>
-                <ul>
-                    <li><a href="#chronological">CHRONOLOGICAL</a></li>
-                    <li><a href="#programmatic">PROGRAMMATIC</a></li>
-                    <li><a href="#scale">SCALE</a></li>
-                    <li><a href="#status">STATUS</a></li>
-                </ul>
+              <ul>
+                <li className={item==="CHRONOLOGICAL"?"color-red":null} onClick={()=>handleClick("CHRONOLOGICAL")}>
+                  CHRONOLOGICAL
+                </li>
+                <li className={item==="PROGRAMMATIC"?"color-red":null} onClick={()=>handleClick("PROGRAMMATIC")}>
+                  PROGRAMMATIC
+                </li>
+                <li className={item==="SCALE"?"color-red":null} onClick={()=>handleClick("SCALE")}>
+                 SCALE
+                </li>
+                <li className={item==="STATUS"?"color-red":null} onClick={()=>handleClick("STATUS")}>
+                 STATUS
+                </li>
+              </ul>
             </nav>
-        </header> 
+          </header>
+        </div>
       </div>
-    </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default NavBarBottom; 
+export default NavBarBottom;

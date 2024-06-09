@@ -1,24 +1,22 @@
-import React from 'react'
-import NavBarBottom from '../components/NavBarBottom'
-import ProjectIcons from '../components/ProjectIcons'
-import { arr } from '../utils/constants'
-import Wrapper from '../styles/Home'
+import React, { useContext, useState } from "react";
+import NavBarBottom from "../components/NavBarBottom";
+import Wrapper from "../styles/Home";
+import Status from "../components/Status";
+import Chronological from "../components/Chronological";
+import { MyContext } from "../contextAPI/ContexApi";
+import Scale from "../components/Scale";
+import Programmatic from "../components/Programmatic";
 
 const Home = () => {
+  const {item} = useContext(MyContext);
   return (
     <Wrapper>
-    <div className="content">
-    {
-      arr.map((item)=><ProjectIcons hoverImage={item.initialImg} initialImg={item.hoverImage} Name={item.name}/> )
-    }
-    </div>
-    
-    <div className="navbar">
-      <NavBarBottom/>
-    </div>
-    
+      {item==="STATUS"?<Status/>:item==="CHRONOLOGICAL"?<Chronological/>:item==="SCALE"?<Scale/>:item==="PROGRAMMATIC"?<Programmatic/>:<Chronological/>}
+      <div className="navbar">
+        <NavBarBottom />
+      </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
