@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import Wrapper from "../styles/NavBarBottom.js";
 import { MyContext } from "../contextAPI/ContexApi.js";
+import { Link } from "react-router-dom";
 
 const NavBarBottom = () => {
   const {item , setItem} = useContext(MyContext);
-  console.log(item);
   const handleClick = (e)=>{
     setItem(e);
   }
@@ -13,7 +13,7 @@ const NavBarBottom = () => {
       <div class="container">
         <div className="header">
           <header className="main-header">
-            <h3>INFO</h3>
+            <Link to="/information"><h3>INFO</h3></Link>
             <nav>
               <ul>
                 <li className={item==="CHRONOLOGICAL"?"color-red":null} onClick={()=>handleClick("CHRONOLOGICAL")}>

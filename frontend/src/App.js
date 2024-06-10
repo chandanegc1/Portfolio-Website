@@ -4,14 +4,16 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Home from './pages/Home';
+import Projects from './pages/Projects';
 import "./styles/index.css"
+import Information from './pages/Information';
 
 const App = () => {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<Home/>} />
+      <Route path="/" element={<Projects/>} />
+      <Route path="/information" element={<Information/>} />
       </Routes>
     </Router>
   )

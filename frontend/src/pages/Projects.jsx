@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import NavBarBottom from "../components/NavBarBottom";
-import Wrapper from "../styles/Home";
+import Wrapper from "../styles/Projects";
 import Status from "../components/Status";
 import Chronological from "../components/Chronological";
 import { MyContext } from "../contextAPI/ContexApi";
 import Scale from "../components/Scale";
 import Programmatic from "../components/Programmatic";
 
-const Home = () => {
+const Projects = () => {
   const {item} = useContext(MyContext);
   return (
     <Wrapper>
@@ -19,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Projects;
