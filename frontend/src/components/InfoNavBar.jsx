@@ -9,7 +9,7 @@ const InfoNavBar = () => {
         <div className="menublock">
           <ul className="menu">
             <li>
-              <Link to="/information/">
+              <Link to="/">
                 <h4>PROJECTS</h4>
               </Link>
             </li>

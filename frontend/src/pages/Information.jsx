@@ -6,7 +6,7 @@ const Information = () => {
   return (
     <>
       <InfoNavBar />
-      <div style={{ paddingLeft: '200px', paddingTop: '10px' }}>
+      <div style={{ paddingLeft: '190px', paddingTop: '10px' }}>
         <Outlet />
       </div>
     </>

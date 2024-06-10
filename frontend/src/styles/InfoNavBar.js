@@ -12,20 +12,18 @@ const Wrapper = styled.article`
     top: 0;
     left: 0;
     bottom: 0px;
-    background-color: transparent;
 }
-
 .menublock {
     height: 100%;
     top: 0px;
     bottom: 0px;
     overflow: auto;
     position: absolute;
-    width: 200px;
+    width: 180px;
     background-color: #fff;
     padding: 10px 0px 10px 25px;
     min-height: 444px;
-    background-color: transparent;
+    border-right: 1px solid black;
 }
 ul.menu {
     list-style: none outside none;
