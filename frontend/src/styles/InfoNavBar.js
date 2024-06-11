@@ -48,5 +48,8 @@ a:hover{
     color: red;
 }
 
+.red-color{
+    color: red;
+}
 `;
 export default Wrapper;

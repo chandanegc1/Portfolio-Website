@@ -18,6 +18,9 @@ const Wrapper = styled.article`
     justify-content: center;
     align-items: center;
   }
+  .main-header h3:hover{
+    color: red;
+  }
   .main-header a {
     text-decoration: none;
   }
@@ -32,7 +35,7 @@ const Wrapper = styled.article`
     justify-content: space-around;
     list-style: none;
   }
-  .main-header nav ul li a:hover {
+  .main-header nav ul li:hover {
     color: red;
   }
   .main-header nav ul li{

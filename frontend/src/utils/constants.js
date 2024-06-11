@@ -11,16 +11,13 @@ function generateArray() {
       link: ""
     });
   }
-  
   return arr;
 }
-
 export const arr = generateArray();
+
 
 function generateArray1() {
   const arr = [];
-  const totalElements = 40;
-  
   for (let i = 0; i < 20; i++) {
     arr.push({
       name: "XYZ",
