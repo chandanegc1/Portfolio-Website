@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Projects from './pages/Projects';
 import Information from './pages/Information';
+import "./styles/index.css";
 import News from './pages/News';
 import About from './pages/About';
 import BigIdea from './pages/BigIdea';
-import "./styles/index.css";
 import Lectures from './pages/Lectures';
 import Shop from './pages/Shop';
 import Awards from './pages/Awards';
@@ -22,7 +22,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Projects />} />
         <Route path="/information" element={<Information />}>
-          <Route element={<News />} index={true} />
+          {/* <Route element={<News />} index={true} />
           <Route path="about" element={<About />} />
           <Route path="big-ideas" element={<BigIdea />} />
           <Route path="lectures" element={<Lectures />} />
@@ -33,7 +33,7 @@ const App = () => {
           <Route path="staff" element={<Staff />} />
           <Route path="contact" element={<Contact />} />
           <Route path="search" element={<Search />} />
-          <Route path="feedback" element={<FeedBack />} />
+          <Route path="feedback" element={<FeedBack />} /> */}
         </Route>
       </Routes>
     </Router>
