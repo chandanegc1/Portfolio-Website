@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Wrapper from "../styles/InfoNavBar";
-import { Link } from 'react-router-dom';
+import {HashLink as Link } from 'react-router-hash-link';
 
 const InfoNavBar = () => {
   let path = String(window.location.pathname.slice(13)).toUpperCase();
@@ -16,67 +16,67 @@ const InfoNavBar = () => {
         <div className="menublock">
           <ul className="menu">
             <li onClick={(e)=>handleClick("PROJECTS")} >
-              <Link to="/" className={color==="PROJECTS"?"red-color":""}>
+              <Link smooth to="/" className={color==="PROJECTS"?"red-color":""}>
                 <h4>PROJECTS</h4>
               </Link>
             </li>
             <li onClick={()=>handleClick("NEWS")} >
-              <Link className={color==="NEWS"?"red-color":""}to="/information" >
+              <Link smooth className={color==="NEWS"?"red-color":""}to="/information/#news" >
                 NEWS
               </Link>
             </li>
             <li onClick={()=>handleClick("ABOUT")} >
-              <Link className={color==="ABOUT"?"red-color":""}to="/information/about">
+              <Link smooth className={color==="ABOUT"?"red-color":""}to="/information/#about">
                 ABOUT
               </Link>
             </li>
             <li onClick={()=>handleClick("BIG-IDEAS")} >
-              <Link className={color==="BIG-IDEAS"?"red-color":""}to="/information/big-ideas">
+              <Link smooth className={color==="BIG-IDEAS"?"red-color":""}to="/information/#big-ideas">
                 BIG IDEAS
               </Link>
             </li>
             <li onClick={()=>handleClick("LECTURES")} >
-              <Link className={color==="LECTURES"?"red-color":""}to="/information/lectures">
+              <Link smooth className={color==="LECTURES"?"red-color":""}to="/information/#lectures">
                 LECTURES
               </Link>
             </li>
             <li onClick={()=>handleClick("SHOP")} >
-              <Link className={color==="SHOP"?"red-color":""}to="/information/shop">
+              <Link smooth className={color==="SHOP"?"red-color":""}to="/information/#shop">
                 SHOP
               </Link>
             </li>
             <li onClick={()=>handleClick("MEDIA")} >
-              <Link className={color==="MEDIA"?"red-color":""}to="/information/media">
+              <Link smooth className={color==="MEDIA"?"red-color":""}to="/information/#media">
                 MEDIA
               </Link>
             </li>
             <li onClick={()=>handleClick("AWARDS")} >
-              <Link className={color==="AWARDS"?"red-color":""}to="/information/awards">
+              <Link smooth className={color==="AWARDS"?"red-color":""}to="/information/#awards">
                 AWARDS
               </Link>
             </li>
             <li onClick={()=>handleClick("JOBS")} >
-              <Link className={color==="JOBS"?"red-color":""}to="/information/jobs">
+              <Link smooth className={color==="JOBS"?"red-color":""}to="/information/#jobs">
                 JOBS
               </Link>
             </li>
             <li onClick={()=>handleClick("STAFF")} >
-              <Link className={color==="STAFF"?"red-color":""}to="/information/staff">
+              <Link smooth className={color==="STAFF"?"red-color":""}to="/information/#staff">
                 STAFF
               </Link>
             </li>
             <li onClick={()=>handleClick("CONTACT")} >
-              <Link className={color==="CONTACT"?"red-color":""}to="/information/contact">
+              <Link smooth className={color==="CONTACT"?"red-color":""}to="/information/#contact">
                 CONTACT
               </Link>
             </li>
             <li onClick={()=>handleClick("SEARCH")} >
-              <Link className={color==="SEARCH"?"red-color":""}to="/information/search">
+              <Link smooth className={color==="SEARCH"?"red-color":""}to="/information/#search">
                 SEARCH
               </Link>
             </li>
             <li onClick={()=>handleClick("FEEDBACK")} >
-              <Link className={color==="FEEDBACK"?"red-color":""}to="/information/feedback">
+              <Link smooth className={color==="FEEDBACK"?"red-color":""}to="/information/#feedback">
                 FEEDBACK
               </Link>
             </li>
