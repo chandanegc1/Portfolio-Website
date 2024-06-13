@@ -5,7 +5,7 @@ import IconGroup from './IconGroup';
 const Status = () => {
   return (
     <Wrapper>
-     <div className="full-destop">
+     <div className="full-destop fade-in">
         <IconGroup Name="IDEA" arr={arr} />
         <IconGroup Name="INOVATION" arr={arr1} />
         <IconGroup Name="CUNSTRUCTION" arr={arr1} />

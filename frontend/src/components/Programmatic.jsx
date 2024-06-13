@@ -6,7 +6,7 @@ import {arr1 } from '../utils/constants'
 const Programmatic = () => {
   return (
     <Wrapper>
-     <div className="full-destop">
+     <div className="full-destop fade-in">
         <IconGroup Name="COMMERCIAL" arr={arr1} />
         <IconGroup Name="URBANISM" arr={arr1} />
         <IconGroup Name="PUBLIC SPACE" arr={arr1} />

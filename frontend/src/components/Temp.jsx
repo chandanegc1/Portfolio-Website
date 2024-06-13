@@ -1,26 +1,19 @@
-import React from 'react'
-import Wrapper from '../styles/Home'
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './temp.css'; // Import your CSS file containing animation styles
 
-const Temp = () => {
-  return (
-    <Wrapper>
-    <div class="container">
-      <div className="header">
-        <h2>INFO</h2>
-        <header className="main-header">
-            <nav>
-                <ul>
-                    <li><a href="#home">CHRONOLOGICAL</a></li>
-                    <li><a href="#services">PROGRAMMATIC</a></li>
-                    <li><a href="#about">SCALE</a></li>
-                    <li><a href="#contact">STATUS</a></li>
-                </ul>
-            </nav>
-        </header>
-      </div>
-    </div>
-    </Wrapper>
-  )
-}
+export const Home = () => (
+  <div className="fade-in">
+    <h2>Home</h2>
+    <Link to="/about">About</Link>
+  </div>
+);
 
-export default Temp
+export const About = () => (
+  <div className="fade-in">
+    <h2>About</h2>
+    <Link to="/">Home</Link>
+  </div>
+);
+
+

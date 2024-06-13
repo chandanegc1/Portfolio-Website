@@ -14,3 +14,20 @@
  .name h1{
    background-color: red;
  }
+
+ .fade-in  {
+   opacity: 0;
+   transform: translateY(100%);
+   animation: bottomUp 0.5s forwards ;
+ }
+ 
+ @keyframes bottomUp {
+   from {
+     opacity: 0;
+     transform: translateY(100%);
+   }
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
