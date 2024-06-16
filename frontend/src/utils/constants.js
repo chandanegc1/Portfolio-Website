@@ -7,8 +7,15 @@ function generateArray() {
       name: "XYZ",
       initialImg: `https://picsum.photos/200/${300 + i}?blur=2`,
       hoverImage: `https://picsum.photos/200/${300 + i}`,
-      description: `Description for project${i + 1}`,
-      link: ""
+      data: {
+        name:"HOUSE-M",
+        category:"DESIGN",
+        year:2000+i,
+        status:"COMPLETE",
+        location:"INDIA",
+        img:["url","url","url"],
+        description: `Description for project${i + 1}`,
+      }
     });
   }
   return arr;
@@ -23,8 +30,15 @@ function generateArray1() {
       name: "XYZ",
       initialImg: `https://picsum.photos/200/${300 + i}?blur=2`,
       hoverImage: `https://picsum.photos/200/${300 + i}`,
-      description: `Description for project${i + 1}`,
-      link: ""
+      data: {
+        name:"HOUSE-M",
+        category:"DESIGN",
+        year:2000+i,
+        status:"COMPLETE",
+        location:"INDIA",
+        img:["url","url","url"],
+        description: `Description for project${i + 1}`,
+      }
     });
   }
   

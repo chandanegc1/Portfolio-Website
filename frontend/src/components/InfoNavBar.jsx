@@ -3,9 +3,7 @@ import Wrapper from "../styles/InfoNavBar";
 import {HashLink as Link } from 'react-router-hash-link';
 
 const InfoNavBar = () => {
-  let path = String(window.location.pathname.slice(13)).toUpperCase();
-  if(path==="") path = "NEWS";
-  
+  let path = window.location.hash.slice(1).toUpperCase()  || "NEWS";
   const [color , setColor] = useState(path);
   const handleClick = (e)=>{
     setColor(e);

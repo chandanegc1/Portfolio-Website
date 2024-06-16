@@ -11,9 +11,7 @@ const ProjectIcons = ({ initialImg, hoverImage, Name, Link }) => {
           onMouseEnter={() => setImageSrc(hoverImage)}
           onMouseLeave={() => setImageSrc(initialImg)}
         >
-          <a href={Link}>
-            <img src={ImageSrc} alt={Name} />
-          </a>
+          <img src={ImageSrc} alt={Name} />
         </div>
         <p>{Name}</p>
       </div>

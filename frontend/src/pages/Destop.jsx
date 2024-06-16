@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext} from "react";
 import NavBarBottom from "../components/NavBarBottom";
 import Wrapper from "../styles/Projects";
 import Status from "../components/Status";
@@ -7,7 +7,7 @@ import { MyContext } from "../contextAPI/ContexApi";
 import Scale from "../components/Scale";
 import Programmatic from "../components/Programmatic";
 
-const Projects = () => {
+const Destop = () => {
   const {item} = useContext(MyContext);
   return (
     <Wrapper>
@@ -19,4 +19,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Destop;
