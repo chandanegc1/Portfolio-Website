@@ -13,8 +13,9 @@ function generateArray() {
         year:2000+i,
         status:"COMPLETE",
         location:"INDIA",
-        img:["url","url","url"],
-        description: `Description for project${i + 1}`,
+        img:[`https://picsum.photos/id/${200+i}/700/400`,`https://picsum.photos/id/${230+i}/700/400`,`https://picsum.photos/id/${300+i}/700/400`],
+        description: `at FlowParserMixin.parseExprSubscripts (C:\Users\lavku\Desktop\Github Clone\Portfolio-Website\frontend\node_modules\@babel\parser\lib\index.js:10568:23)
+    at FlowParserMixin.parseUpdate (C:\Users\lavku\Desktop\Github Clone\Portfolio-Website\frontend\node_modules\@babel\parser\lib\index.js:10551:21)`,
       }
     });
   }
@@ -36,8 +37,9 @@ function generateArray1() {
         year:2000+i,
         status:"COMPLETE",
         location:"INDIA",
-        img:["url","url","url"],
-        description: `Description for project${i + 1}`,
+        img:[`https://picsum.photos/id/${200+i}/700/400`,`https://picsum.photos/id/${230+i}/700/400`,`https://picsum.photos/id/${300+i}/700/400`],
+        description: `at FlowParserMixin.parseExprSubscripts (C:\Users\lavku\Desktop\Github Clone\Portfolio-Website\frontend\node_modules\@babel\parser\lib\index.js:10568:23)
+    at FlowParserMixin.parseUpdate (C:\Users\lavku\Desktop\Github Clone\Portfolio-Website\frontend\node_modules\@babel\parser\lib\index.js:10551:21)`,
       }
     });
   }
