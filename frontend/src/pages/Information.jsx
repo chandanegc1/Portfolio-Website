@@ -1,6 +1,5 @@
 import React from 'react';
 import InfoNavBar from '../components/InfoNavBar';
-import { Outlet } from 'react-router-dom';
 import About from './About';
 import News from './News';
 import BigIdea from './BigIdea';
