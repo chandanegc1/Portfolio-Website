@@ -1,51 +1,31 @@
-import React, { useState, useEffect } from "react";
+
 import { useLocation, Link } from "react-router-dom";
 import Wrapper from "../styles/project";
+import ImageSlider from "../components/ImageSlider";
+import { useState } from "react";
 
 const Project = () => {
   const location = useLocation();
   const item = location.state.item;
+  const [istrue , setIstrue] = useState(true);
 
-  const [counter, setCounter] = useState(0);
-  const [slider, setSlider] = useState([]);
+  function handleClick(){
+    setIstrue(!istrue);
+  }
 
-  useEffect(() => {
-    const sliderElements = document.querySelectorAll(".slid");
-    sliderElements.forEach((item, index) => {
-      item.style.left = `${index * 100}%`;
-    });
-    setSlider(sliderElements);
-  }, []);
-
-  const slideImg = () => {
-    slider.forEach((item) => {
-      item.style.transform = `translateX(-${counter * 100}%)`;
-    });
-  };
-
-  useEffect(() => {
-    slideImg();
-  }, [counter]);
-
-  const prev = () => {
-    setCounter((prevCounter) => Math.max(prevCounter - 1, 0));
-  };
-
-  const next = () => {
-    setCounter((prevCounter) => Math.min(prevCounter + 1, slider.length - 1));
-  };
 
   return (
     <Wrapper>
-      <Link to="/" className="cancel-btn">
-        <h1>X</h1>
-      </Link>
+      <div className="cancel-btn">
+        {!istrue?<h1 onClick={handleClick}>X</h1>:null}
+      </div>
       <div className="project">
+        <div className="project-left">
         <div className="product-details">
           <div className="details">
             <h4>PROJECT DETAILS</h4>
-            <br />
-            <br />
+            <br/>
+            <br/>
             <Link to="/"><img src={item.initialImg} alt="" className="logo" /></Link>
             <p>{item.name}</p>
             <br />
@@ -66,18 +46,15 @@ const Project = () => {
             </p>
           </div>
         </div>
+        <div className="page-nav">
+          <h4>PROJECT</h4>
+          <h4>INFO</h4>
+        </div>
+        </div>
         <div className="product-right">
-          <div className="product-img">
-            <img src={item.data.img[2]} alt="" className="slid" />
-            <img src={item.data.img[1]} alt="" className="slid" />
-            <img src={item.data.img[0]} alt="" className="slid" />
-            <div className="button prev-button" onClick={prev}>
-            {"<<"}
-            </div>
-            <div className="button next-button" onClick={next}>
-            {">>"}
-            </div>
-          </div>
+          {istrue?<div className="class-img">
+            <img src={item.data.img[2]} alt="" onClick={handleClick} className="first-img" />
+          </div>:<ImageSlider item={item}/>}
           <div className="product-desc">
             <p>{item.data.description}</p>
           </div>

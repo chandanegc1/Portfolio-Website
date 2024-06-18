@@ -4,12 +4,10 @@ const Wrapper = styled.article`
   .project {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0 20px;
     position: relative;
   }
-
   .cancel-btn {
     position: absolute;
     top: 10px;
@@ -26,6 +24,14 @@ const Wrapper = styled.article`
     cursor: pointer;
   }
 
+  .page-nav{
+    position: fixed;
+    bottom: 20px;
+  }
+  .page-nav h4:hover{
+    color: red;
+    cursor: pointer;
+  }
   .product-details {
     display: flex;
     flex-direction: column;
@@ -33,13 +39,10 @@ const Wrapper = styled.article`
     padding: 20px;
     min-width: 300px;
   }
-
   .logo {
     width: 50px;
     height: 50px;
-    margin-bottom: 20px;
   }
-
   .product-right {
     display: flex;
     flex-direction: column;
@@ -47,45 +50,20 @@ const Wrapper = styled.article`
     width: 100%;
     margin-top: 20px;
   }
-
-  .product-img {
+  .class-img{
     width: 100%;
     max-width: 80vw;
     height: 50vh;
-    position: relative;
-    overflow: hidden;
   }
-
-  .slid {
+ .first-img{
     width: 100%;
     height: 100%;
-    position: absolute;
-    transition: transform 1s ease;
-  }
-
+    cursor: pointer;
+ }
   .product-desc {
     width: 100%;
     padding: 20px 5px;
     margin-top: 20px;
-  }
-
-  .button {
-    position: absolute;
-    top: 50%;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-  }
-
-  .prev-button {
-    left: 0px;
-  }
-
-  .next-button {
-    right: 0px;
   }
 
   @media (min-width: 768px) {
@@ -96,7 +74,7 @@ const Wrapper = styled.article`
 
     .product-details,
     .product-right {
-      height: 100vh;
+      /* height: 100vh; */
     }
 
     .product-details {
@@ -109,7 +87,7 @@ const Wrapper = styled.article`
     }
 
     .product-img {
-      height: 60vh;
+      /* height: 60vh; */
     }
   }
 `;
