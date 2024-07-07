@@ -13,8 +13,7 @@ const Wrapper = styled.article`
    flex-direction: column;
    align-items: center;
    text-align: center;
-  
-
+   cursor: pointer;
  }
  .icon-group h3{
     margin: 0 10px;

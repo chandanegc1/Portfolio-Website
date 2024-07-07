@@ -2,25 +2,27 @@ import styled from "styled-components";
 
 const Wrapper = styled.article`
   .project {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
     position: relative;
   }
   .cancel-btn {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    position: fixed;
+    top: -40px;
+    right: 10px;
     z-index: 10;
+    padding: 0 5px;
     text-decoration: none;
+    background-color: aliceblue;
   }
 
   .cancel-btn h1 {
     margin: 0;
     padding: 0;
     font-size: 24px;
-    color: #ff0000;
+    color: black;
     cursor: pointer;
   }
 
@@ -48,11 +50,10 @@ const Wrapper = styled.article`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 20px;
   }
   .class-img{
     width: 100%;
-    max-width: 80vw;
+    max-width: 90vw;
     height: 50vh;
   }
  .first-img{

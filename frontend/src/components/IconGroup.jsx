@@ -16,6 +16,7 @@ const IconGroup = ({ Name, arr }) => {
                 hoverImage={item.initialImg}
                 initialImg={item.hoverImage}
                 Name={item.name}
+                fullName={item.data.name}
                 Link={item.link}
               />
               </div>

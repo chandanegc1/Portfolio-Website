@@ -6,7 +6,10 @@ const Wrapper = styled.article`
     top: 0;
     right: 0;
     bottom: 0;
-    position: fixed;
+    margin-top: -50px;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
     overflow: hidden;
   }
   .slid {
