@@ -58,7 +58,7 @@ const Project = () => {
             {istrue ? (
               <div className="class-img">
                 <img
-                  src={item.data.img[2]}
+                  src={item.data.img[0]}
                   alt=""
                   onClick={handleClick}
                   className="first-img"

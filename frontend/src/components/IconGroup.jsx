@@ -13,8 +13,8 @@ const IconGroup = ({ Name, arr }) => {
             {arr.map((item) => (
               <div className="icon-click" onClick={()=>navigate("/project" , {state:{item}})}>
                 <ProjectIcons
-                hoverImage={item.initialImg}
-                initialImg={item.hoverImage}
+                hoverImage={item.hoverImage}
+                initialImg={item.initialImg}
                 Name={item.name}
                 fullName={item.data.name}
                 Link={item.link}
