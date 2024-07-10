@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Wrapper from "../styles/ProjectIcons";
+import Wrapper from "../styles/Icons";
 
-const ProjectIcons = ({ initialImg, hoverImage, Name , fullName }) => {
+const Icons = ({ initialImg, hoverImage, Name , fullName }) => {
   const [ImageSrc, setImageSrc] = useState(initialImg);
   const [isDisplay, setIsDisplay] = useState(true);
 
@@ -30,4 +30,4 @@ const ProjectIcons = ({ initialImg, hoverImage, Name , fullName }) => {
   );
 };
 
-export default ProjectIcons;
+export default Icons;

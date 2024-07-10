@@ -1,7 +1,7 @@
 import { iconData } from "./IconData";
 function generateArray1() {
   const arr = [];
-  for (let i = 0; i <9; i++) {
+  for (let i = 0; i <12; i++) {
     arr.push({
       name: iconData[i].Code,
       initialImg: `data/Project 0${i}/Logo ${i}.jpg`,

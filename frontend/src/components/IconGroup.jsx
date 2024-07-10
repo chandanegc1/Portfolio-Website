@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectIcons from "./ProjectIcons";
+import Icons from "./Icons";
 import Wrapper from "../styles/IconGroup";
 import { useNavigate } from "react-router-dom";
 
@@ -9,10 +9,11 @@ const IconGroup = ({ Name, arr }) => {
     <Wrapper>
       <div className="destop-content">
         <div className="icon-group">
+        <h3>{Name}</h3>
           <div className="box-icon">
             {arr.map((item) => (
               <div className="icon-click" onClick={()=>navigate("/project" , {state:{item}})}>
-                <ProjectIcons
+                <Icons
                 hoverImage={item.hoverImage}
                 initialImg={item.initialImg}
                 Name={item.name}
@@ -22,7 +23,7 @@ const IconGroup = ({ Name, arr }) => {
               </div>
             ))}
           </div>
-          <h3>{Name}</h3>
+          
         </div>
       </div>
     </Wrapper>
