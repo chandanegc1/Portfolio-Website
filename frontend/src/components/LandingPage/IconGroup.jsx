@@ -1,6 +1,6 @@
 import React from "react";
 import Icons from "./Icons";
-import Wrapper from "../styles/IconGroup";
+import Wrapper from "../../styles/IconGroup";
 import { useNavigate } from "react-router-dom";
 
 const IconGroup = ({ Name, arr }) => {

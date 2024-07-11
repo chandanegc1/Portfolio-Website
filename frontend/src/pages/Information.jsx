@@ -1,17 +1,17 @@
 import React from 'react';
-import InfoNavBar from '../components/InfoNavBar';
-import About from './About';
-import News from './News';
-import BigIdea from './BigIdea';
-import FeedBack from './FeedBack';
-import Lectures from './Lectures';
-import Shop from './Shop';
-import Media from './Media';
-import Awards from './Awards';
-import Staff from './Staff';
-import Jobs from './Jobs';
+import InfoNavBar from '../components/InformationPage/InfoNavBar';
+import About from '../components/InformationPage/About';
+import News from '../components/InformationPage/News';
+import BigIdea from '../components/InformationPage/BigIdea';
+import FeedBack from '../components/InformationPage/FeedBack';
+import Lectures from '../components/InformationPage/Lectures';
+import Shop from '../components/InformationPage/Shop';
+import Media from '../components/InformationPage/Media';
+import Awards from '../components/InformationPage/Awards';
+import Staff from '../components/InformationPage/Staff';
+import Jobs from '../components/InformationPage/Jobs';
 import Wrapper from '../styles/Information';
-import Search from './Search';
+import Search from '../components/InformationPage/Search';
 const Information = () => {
   return (
     <Wrapper>

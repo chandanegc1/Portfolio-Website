@@ -2,11 +2,6 @@ import styled from "styled-components";
 
 const Wrapper = styled.article`
  .product-img {
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: -50px;
     width: 100%;
     height: 100vh;
     position: absolute;

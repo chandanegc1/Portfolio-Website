@@ -1,11 +1,11 @@
 import React, { useContext} from "react";
-import NavBarBottom from "../components/NavBarBottom";
+import NavBarBottom from "../components/InformationPage/NavBarBottom";
 import Wrapper from "../styles/Projects";
-import Status from "../components/Status";
-import Chronological from "../components/Chronological";
+import Status from "../components/LandingPage/Status";
+import Chronological from "../components/LandingPage/Chronological";
 import { MyContext } from "../contextAPI/ContexApi";
-import Scale from "../components/Scale";
-import Programmatic from "../components/Programmatic";
+import Scale from "../components/LandingPage/Scale";
+import Programmatic from "../components/LandingPage/Programmatic";
 
 const Destop = () => {
   const {item} = useContext(MyContext);

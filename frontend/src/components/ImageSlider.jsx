@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Wrapper from "../styles/ImageSlider";
 
-const ImageSlider = ({item}) => {
+const ImageSlider = ({item , backBtn}) => {
     const [counter, setCounter] = useState(0);
     const [slider, setSlider] = useState([]);
   
@@ -18,7 +18,7 @@ const ImageSlider = ({item}) => {
         item.style.transform = `translateX(-${counter * 100}%)`;
       });
     };
-  
+  console.log(counter)
     useEffect(() => {
       slideImg();
     }, [counter]);
@@ -33,12 +33,12 @@ const ImageSlider = ({item}) => {
   return (
     <Wrapper>
     <div className="product-img ">
-            <img src={item.data.img[2]} alt="" className="slid" />
+            {/* <img src={item.data.img[]} alt="" className="slid" /> */}
             <img src={item.data.img[1]} alt="" className="slid" />
-            <img src={item.data.img[0]} alt="" className="slid" />
+            <img src={item.data.img[2]} alt="" className="slid" />
             <img src={item.data.img[3]} alt="" className="slid" />
             <img src={item.data.img[4]} alt="" className="slid" />
-            <div className="button prev-button" onClick={prev}>
+            <div className="button prev-button" onClick={!counter==0?prev:backBtn}>
             {"<<"}
             </div>
             <div className="button next-button" onClick={next}>

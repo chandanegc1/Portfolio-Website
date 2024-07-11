@@ -1,6 +1,6 @@
 import React from 'react'
-import Wrapper from '../styles/Projects'
-import { arr1 } from "../utils/constants"; 
+import Wrapper from '../../styles/Projects'
+import { arr1 } from "../../utils/constants"; 
 import IconGroup from './IconGroup';
 const Scale = () => {
   return (

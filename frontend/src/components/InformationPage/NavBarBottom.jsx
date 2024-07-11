@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import Wrapper from "../styles/NavBarBottom.js";
-import { MyContext } from "../contextAPI/ContexApi.js";
+import Wrapper from "../../styles/NavBarBottom.js";
+import { MyContext } from "../../contextAPI/ContexApi.js";
 import { Link } from "react-router-dom";
 
 const NavBarBottom = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Wrapper from "../styles/Icons";
+import Wrapper from "../../styles/Icons";
 
 const Icons = ({ initialImg, hoverImage, Name , fullName }) => {
   const [ImageSrc, setImageSrc] = useState(initialImg);

@@ -1,7 +1,7 @@
 import React from 'react'
-import Wrapper from '../styles/Projects'
+import Wrapper from '../../styles/Projects'
 import IconGroup from './IconGroup'
-import {arr1 } from '../utils/constants'
+import {arr1 } from '../../utils/constants'
 
 const Programmatic = () => {
   return (

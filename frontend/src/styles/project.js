@@ -2,20 +2,22 @@ import styled from "styled-components";
 
 const Wrapper = styled.article`
   .project {
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
   }
   .cancel-btn {
     position: fixed;
-    top: -40px;
-    right: 10px;
+    top: -45px;
+    right: 15px;
     z-index: 10;
     padding: 0 5px;
     text-decoration: none;
     background-color: aliceblue;
+  }
+  .btn2 {
+    top: 50vh;
+    right: 2px;
+    background-color: white;
   }
 
   .cancel-btn h1 {
@@ -26,11 +28,11 @@ const Wrapper = styled.article`
     cursor: pointer;
   }
 
-  .page-nav{
+  .page-nav {
     position: fixed;
     bottom: 20px;
   }
-  .page-nav h4:hover{
+  .page-nav h4:hover {
     color: red;
     cursor: pointer;
   }
@@ -45,22 +47,26 @@ const Wrapper = styled.article`
     width: 50px;
     height: 50px;
   }
+  .project-left{
+    width: 400px;
+  }
   .product-right {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .class-img{
+  .class-img {
     width: 100%;
-    max-width: 90vw;
+    max-width: 1400px;
     height: 50vh;
   }
- .first-img{
-    width: 100%;
+  .banner {
+    width: 1400px;
     height: 100%;
+    max-height: 300px;
     cursor: pointer;
- }
+  }
   .product-desc {
     width: 100%;
     padding: 20px 5px;
@@ -91,6 +97,33 @@ const Wrapper = styled.article`
       /* height: 60vh; */
     }
   }
+  .slide-left {
+    animation: slideIn 0.8s forwards; 
+    position: relative;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .slide-out {
+    animation: slideout 0.8s forwards;
+    position: relative;
+  }
+
+  @keyframes slideout {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 `;
 
 export default Wrapper;

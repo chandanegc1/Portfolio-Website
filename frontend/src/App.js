@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Destop from './pages/Destop';
+import Destop from './pages/LandingPage';
 import Information from './pages/Information';
 import "./styles/index.css";
-import Project from './pages/Project';
+import Project from './pages/DetailsProject';
 
 const App = () => {
   return (

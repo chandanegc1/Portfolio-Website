@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Wrapper from "../styles/InfoNavBar";
+import Wrapper from "../../styles/InfoNavBar";
 import {HashLink as Link } from 'react-router-hash-link';
 
 const InfoNavBar = () => {
