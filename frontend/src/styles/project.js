@@ -41,25 +41,24 @@ const Wrapper = styled.article`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    min-width: 300px;
+    min-width: 00px;
+    height: 300px;
   }
   .logo {
     width: 50px;
     height: 50px;
   }
-  .project-left{
+  .project-left {
     width: 400px;
   }
   .product-right {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
   .class-img {
     width: 100%;
     max-width: 1400px;
-    height: 50vh;
   }
   .banner {
     width: 1400px;
@@ -68,9 +67,8 @@ const Wrapper = styled.article`
     cursor: pointer;
   }
   .product-desc {
-    width: 100%;
     padding: 20px 5px;
-    margin-top: 20px;
+    margin: 8px 0;
   }
 
   @media (min-width: 768px) {
@@ -98,7 +96,7 @@ const Wrapper = styled.article`
     }
   }
   .slide-left {
-    animation: slideIn 0.8s forwards; 
+    animation: slideIn 0.8s forwards;
     position: relative;
   }
 
@@ -123,7 +121,6 @@ const Wrapper = styled.article`
       transform: translateX(0);
     }
   }
-
 `;
 
 export default Wrapper;
