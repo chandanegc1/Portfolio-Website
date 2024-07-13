@@ -1,5 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
-import Wrapper from "../styles/project";
+import Wrapper from "../styles/DetailsProject";
 import ImageSlider from "../components/ImageSlider";
 import { useState, useEffect } from "react";
 

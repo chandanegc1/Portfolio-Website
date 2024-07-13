@@ -43,6 +43,8 @@ const Wrapper = styled.article`
     padding: 20px;
     min-width: 00px;
     height: 300px;
+    font-family: "Agency FB Bold";
+    font-weight: normal;
   }
   .logo {
     width: 50px;
@@ -66,9 +68,14 @@ const Wrapper = styled.article`
     max-height: 300px;
     cursor: pointer;
   }
+  a {
+    color: black;
+    text-decoration: none;
+  }
   .product-desc {
     padding: 20px 5px;
     margin: 8px 0;
+    font-family: "Agency FB", sans-serif;
   }
 
   @media (min-width: 768px) {

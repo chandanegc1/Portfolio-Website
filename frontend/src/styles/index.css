@@ -1,40 +1,37 @@
+/* Reset all elements to ensure consistent styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "KlavikaRegular", Courier, "Courier New", monospace;
-}
-
-a {
-  color: black;
-  text-decoration: none;
 }
 
 .fade-in {
- animation: slideIn 0.8s forwards;
- position: relative; 
-}
-@keyframes slideIn {
- 0% {
-     transform: translateY(100%); 
- }
- 100% {
-     transform: translateY(0); 
- }
+  animation: slideIn 0.8s forwards;
+  position: relative;
 }
 
-.pop-up {
-  animation: popUp 0.8s forwards;
-  transform-origin: center; 
-}
-@keyframes popUp {
+@keyframes slideIn {
   0% {
-      transform: scale(0.5);
-      opacity: 0; 
+    transform: translateY(100%);
   }
   100% {
-      transform: scale(1); 
-      opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Pop-up animation */
+.pop-up {
+  animation: popUp 0.8s forwards;
+  transform-origin: center;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

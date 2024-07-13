@@ -17,6 +17,9 @@ const Wrapper = styled.article`
  }
  .icon-group h3{
     line-height: 40px;
+    font-family: "Agency FB Bold";
+    font-weight: normal;
+    font-size: 17px;
  }
  .box-icon{
     display: flex;
@@ -29,7 +32,7 @@ const Wrapper = styled.article`
     height: 80vh;
  }
  .box-icon .icon-click{
-   margin: 5px 0;
+   margin: 1px 0;
  }
 `;
 export default Wrapper;

@@ -1,11 +1,11 @@
 import styled from "styled-components";
-
 const Wrapper = styled.article`
   * {
     margin: 0;
     padding: 0;
     color: black;
-    font-family: "BIGPixelRegular", Courier, "Courier New", monospace;
+    font-family: "Agency FB Bold";
+    font-weight: normal;
     font-size: 20px;
   }
   .header h3 {
