@@ -3,15 +3,16 @@ import NavBarBottom from "../components/InformationPage/NavBarBottom";
 import Wrapper from "../styles/Projects";
 import Status from "../components/LandingPage/Status";
 import Chronological from "../components/LandingPage/Chronological";
-import { MyContext } from "../contextAPI/ContexApi";
-import Scale from "../components/LandingPage/Scale";
-import Programmatic from "../components/LandingPage/Programmatic";
+import {ProjectData } from "../contextAPI/ContexApi";
+import Location from "../components/LandingPage/Location";
+import Random from "../components/LandingPage/Random";
 
 const Destop = () => {
-  const {item} = useContext(MyContext);
+  const {navPath} = useContext(ProjectData);
   return (
     <Wrapper>
-      {item==="STATUS"?<Status/>:item==="CHRONOLOGICAL"?<Chronological/>:item==="SCALE"?<Scale/>:item==="PROGRAMMATIC"?<Programmatic/>:<Chronological/>}
+      {navPath==="STATUS"?<Status/>:navPath==="CHRONOLOGICAL"?<Chronological/>:navPath==="LOCATION"?<Location/>:navPath==="RANDOM"?<Random/>:null}
+      {/* <Chronological/> */}
       <div className="navbar">
         <NavBarBottom />
       </div>

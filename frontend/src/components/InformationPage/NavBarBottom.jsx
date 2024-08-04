@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 import Wrapper from "../../styles/NavBarBottom.js";
-import { MyContext } from "../../contextAPI/ContexApi.js";
+import { ProjectData } from "../../contextAPI/ContexApi.js";
 import { Link } from "react-router-dom";
 
 const NavBarBottom = () => {
-  const {item , setItem} = useContext(MyContext);
+  const {navPath, setNavPath} = useContext(ProjectData);
   const handleClick = (e)=>{
-    setItem(e);
+    setNavPath(e);
   }
   return (
     <Wrapper>
@@ -16,17 +16,20 @@ const NavBarBottom = () => {
             <Link to="/information"><h3>INFO</h3></Link>
             <nav>
               <ul>
-                <li className={item==="CHRONOLOGICAL"?"color-red":null} onClick={()=>handleClick("CHRONOLOGICAL")}>
+                <li className={navPath==="RANDOM"?"color-red":null} onClick={()=>handleClick("RANDOM")}>
+                  RANDOM
+                </li>
+                <li className={navPath==="CHRONOLOGICAL"?"color-red":null} onClick={()=>handleClick("CHRONOLOGICAL")}>
                   CHRONOLOGICAL
                 </li>
-                <li className={item==="PROGRAMMATIC"?"color-red":null} onClick={()=>handleClick("PROGRAMMATIC")}>
-                  PROGRAMMATIC
-                </li>
-                <li className={item==="SCALE"?"color-red":null} onClick={()=>handleClick("SCALE")}>
-                 SCALE
-                </li>
-                <li className={item==="STATUS"?"color-red":null} onClick={()=>handleClick("STATUS")}>
+                <li className={navPath==="STATUS"?"color-red":null} onClick={()=>handleClick("STATUS")}>
                  STATUS
+                </li>
+                <li className={navPath==="LOCATION"?"color-red":null} onClick={()=>handleClick("LOCATION")}>
+                 LOCATION
+                </li>
+                <li className={navPath==="LIST-VIEW"?"color-red":null} onClick={()=>handleClick("LIST-VIEW")}>
+                 LIST-VIEW
                 </li>
               </ul>
             </nav>

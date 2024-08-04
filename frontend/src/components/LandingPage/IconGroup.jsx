@@ -12,7 +12,7 @@ const IconGroup = ({ Name, arr }) => {
         <h3>{Name}</h3>
           <div className="box-icon">
             {arr.map((item) => (
-              <div className="icon-click" onClick={()=>navigate("/project" , {state:{item}})}>
+              <div key={item.name} className="icon-click" onClick={()=>navigate("/project" , {state:{item}})}>
                 <Icons
                 hoverImage={item.hoverImage}
                 initialImg={item.initialImg}

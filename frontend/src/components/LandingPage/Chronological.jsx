@@ -1,21 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Wrapper from '../../styles/Projects'
-import { arr, arr1 } from "../../utils/constants"; 
 import IconGroup from './IconGroup';
+import { ProjectData } from '../../contextAPI/ContexApi';
+
 const Chronological = () => {
+  const {project} = useContext(ProjectData);
   return (
     <Wrapper>
-     <div className="full-destop fade-in">
-        <IconGroup Name="2001" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
-        <IconGroup Name="2000" arr={arr1} />
+     <div className="full-destop">
+        <IconGroup arr={project}/>
       </div>
     </Wrapper> 
   )

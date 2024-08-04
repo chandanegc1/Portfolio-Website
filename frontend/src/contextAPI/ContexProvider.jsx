@@ -1,11 +1,31 @@
 import { useState } from "react";
-import { MyContext } from "./ContexApi";
+import { ProjectData as Context, MyContext } from "./ContexApi";
+import { arr1 as project } from "../utils/constants";
+
 
 export const ItemProvider = ({children})=>{
-    const [item , setItem] = useState('CHRONOLOGICAL');
+    const [navPath, setNavPath] = useState('CHRONOLOGICAL');
+    switch (navPath) {
+        case 'CHRONOLOGICAL':
+            project.sort((a,b) => b.data.year - a.data.year);
+            break;
+        case 'STATUS':
+            project.sort((a,b) => a.data.status.localeCompare(b.data.status));
+            break;
+        case 'LOCATION':
+            project.sort((a,b) => a.data.location.localeCompare(b.data.location));
+            break;
+        case 'LIST-VIEW':
+            project.sort((a,b) => a.data.status.localeCompare(b.data.status));
+            break;
+        default:
+            project.sort((a,b) => b.data.year - a.data.year);
+            break;
+    }
     return (
-        <MyContext.Provider value={{item , setItem}}>
+        <Context.Provider value={{project , navPath, setNavPath}}>
            {children}
-        </MyContext.Provider>
+        </Context.Provider>
     )
 }
+
