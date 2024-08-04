@@ -1,8 +1,8 @@
 import { iconData } from "./ArrayProjectData";
-function generateArray1() {
-  const arr = [];
+function generateProjects() {
+  const projects = [];
   for (let i = 0; i <12; i++) {
-    arr.push({
+    projects.push({
       name: iconData[i].Code,
       initialImg: `data/Project 0${i}/Logo ${i}.jpg`,
       hoverImage: `data/Project 0${i}/1.jpg`,
@@ -17,6 +17,6 @@ function generateArray1() {
       }
     });
   }
-  return arr;
+  return projects;
 }
-export const arr1 = generateArray1();  
+export const projects = generateProjects();  

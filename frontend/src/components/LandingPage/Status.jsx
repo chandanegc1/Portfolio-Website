@@ -1,16 +1,16 @@
 import React from 'react'
 import Wrapper from '../../styles/Projects'
-import { arr1} from "../../utils/constants"; 
+import { projects} from "../../utils/constants"; 
 import IconGroup from './IconGroup';
 const Status = () => {
   return (
     <Wrapper>
      <div className="full-destop fade-in">
-        <IconGroup Name="IDEA" arr={arr1} />
-        <IconGroup Name="INOVATION" arr={arr1} />
-        <IconGroup Name="CUNSTRUCTION" arr={arr1} />
-        <IconGroup Name="COMPLETE" arr={arr1} />
-      </div>
+        <IconGroup Name="IDEA" projects={projects} />
+       <IconGroup Name="INOVATION" projects={projects} />
+       <IconGroup Name="CUNSTRUCTION" projects={projects} />
+       <IconGroup Name="COMPLETE" projects={projects} />
+     </div>
     </Wrapper> 
   )
 }

@@ -3,7 +3,7 @@ import Icons from "./Icons";
 import Wrapper from "../../styles/IconGroup";
 import { useNavigate } from "react-router-dom";
 
-const IconGroup = ({ Name, arr }) => {
+const IconGroup = ({ Name, projects }) => {
   const navigate = useNavigate();
   return (
     <Wrapper>
@@ -11,14 +11,15 @@ const IconGroup = ({ Name, arr }) => {
         <div className="icon-group">
         <h3>{Name}</h3>
           <div className="box-icon">
-            {arr.map((item) => (
-              <div className="icon-click" onClick={()=>navigate("/project" , {state:{item}})}>
+            {projects.map((project, index) => (
+              <div key={`${index}_${project.name}`} className="icon-click" onClick={()=>navigate("/project" , {state:{project}})}>
                 <Icons
-                hoverImage={item.hoverImage}
-                initialImg={item.initialImg}
-                Name={item.name}
-                fullName={item.data.name}
-                Link={item.link}
+                key={project.name}
+                hoverImage={project.hoverImage}
+                initialImg={project.initialImg}
+                Name={project.name}
+                fullName={project.data.name}
+                Link={project.link}
               />
               </div>
             ))}
