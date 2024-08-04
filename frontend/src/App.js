@@ -10,6 +10,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
+      {/* Todo: fix this typo */}
         <Route path="/" element={<Destop />} />
         <Route path="/project" element={<Project/>} />
         <Route path="/information" element={<Information />}>

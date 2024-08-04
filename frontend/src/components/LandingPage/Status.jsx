@@ -6,7 +6,7 @@ const Status = () => {
   return (
     <Wrapper>
      <div className="full-destop fade-in">
-        <IconGroup Name="IDEA" projects={projects} />
+       <IconGroup Name="IDEA" projects={projects} />
        <IconGroup Name="INOVATION" projects={projects} />
        <IconGroup Name="CUNSTRUCTION" projects={projects} />
        <IconGroup Name="COMPLETE" projects={projects} />
