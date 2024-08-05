@@ -1,18 +1,42 @@
 import React, { useContext} from "react";
-import NavBarBottom from "../components/InformationPage/NavBarBottom";
+import NavBarBottom from "../components/LandingPage/NavBarBottom";
 import Wrapper from "../styles/Projects";
-import Status from "../components/LandingPage/Status";
-import Chronological from "../components/LandingPage/Chronological";
-import {ProjectData } from "../contextAPI/ContexApi";
-import Location from "../components/LandingPage/Location";
-import Random from "../components/LandingPage/Random";
 
-const Destop = () => {
-  const {navPath} = useContext(ProjectData);
+import { useSelector } from "react-redux";
+import IconGroup from "../components/LandingPage/IconGroup";
+
+const LandingPage = () => {
+  const project = useSelector((state) => state.cart);
+  const path = useSelector(state=>state.path);
+  let newPath = path;
+  if(newPath==="CHRONOLOGICAL") newPath = "year";
+  if(newPath==="RANDOM")  newPath = "location";
+  if(newPath==="LIST-VIEW") newPath = "status";
+
+  let brr = [[]];
+  if (project.length > 0) {
+    brr[0][0] = project[0];
+  }
+  let j = 0,
+    k = 0;
+  for (let i = 1; i < project.length; i++) {
+    if (project[i - 1].data[newPath.toLowerCase()] !== project[i].data[newPath.toLowerCase()]) {
+      j++;
+      k = 0;
+      brr[j] = [];
+    }
+    brr[j][k] = project[i];
+    k++;
+  }
+ 
   return (
     <Wrapper>
-      {navPath==="STATUS"?<Status/>:navPath==="CHRONOLOGICAL"?<Chronological/>:navPath==="LOCATION"?<Location/>:navPath==="RANDOM"?<Random/>:null}
-      {/* <Chronological/> */}
+      <div className="full-destop">
+        {project &&
+          brr.map((item, index) => (
+            <IconGroup key={index} Name={item[0].data[newPath.toLowerCase()]} arr={brr[index]} />
+          ))}
+      </div>
       <div className="navbar">
         <NavBarBottom />
       </div>
@@ -20,4 +44,4 @@ const Destop = () => {
   );
 };
 
-export default Destop;
+export default LandingPage;

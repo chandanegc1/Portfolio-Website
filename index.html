@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Transition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .icon-container {
+            display: grid;
+            grid-template-columns: repeat(10, 50px); /* 10 columns */
+            grid-gap: 10px;
+            width: auto;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            font-size: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 50px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="iconContainer" class="icon-container">
+        <!-- Icons will be dynamically inserted here -->
+    </div>
+    <button id="shiftButton">Shift Icons</button>
+
+    <script>
+        const iconContainer = document.getElementById('iconContainer');
+
+        // Function to create icon elements
+        function createIcons() {
+            for (let i = 1; i <= 50; i++) {
+                const iconElement = document.createElement('div');
+                iconElement.classList.add('icon');
+                iconElement.textContent = i;
+                iconContainer.appendChild(iconElement);
+            }
+        }
+
+        // Function to shift icons to new random positions
+        function shiftIcons() {
+            const icons = document.querySelectorAll('.icon');
+            const positions = [...Array(icons.length).keys()]; // Create an array of positions
+            const shuffledPositions = positions.sort(() => Math.random() - 0.5); // Shuffle positions
+
+            icons.forEach((icon, index) => {
+                const position = shuffledPositions[index];
+                const row = Math.floor(position / 10);
+                const col = position % 10;
+                icon.style.transform = `translate(${col * 60}px, ${row * 60}px)`; // Adjust 60px to include grid-gap
+            });
+        }
+
+        // Initialize icons
+        createIcons();
+
+        // Add event listener to the button
+        const shiftButton = document.getElementById('shiftButton');
+        shiftButton.addEventListener('click', shiftIcons);
+    </script>
+</body>
+</html>

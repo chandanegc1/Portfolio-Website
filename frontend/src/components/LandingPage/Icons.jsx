@@ -1,25 +1,31 @@
 import React, { useState } from "react";
 import Wrapper from "../../styles/Icons";
 
-const Icons = ({ initialImg, hoverImage, Name , fullName }) => {
-  const [ImageSrc, setImageSrc] = useState(initialImg);
-  const [isDisplay, setIsDisplay] = useState(true);
+const Icons = ({ initialImg, hoverImage, Name, fullName }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [istrue, setIsTrue] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setIsTrue(!istrue);
+  };
 
-  function toggleDisplay() {
-    setIsDisplay(!isDisplay);
-  }
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setIsTrue(!istrue);
+  };
 
   return (
     <Wrapper>
       <div className="main-box">
         <div
           className="box"
-          onMouseEnter={() => {setImageSrc(hoverImage);toggleDisplay()}}
-          onMouseLeave={() => {setImageSrc(initialImg);toggleDisplay()}}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <img src={ImageSrc} alt={Name} />
-          <p className="p-name" 
-            style={{ display: isDisplay ? "none" : "block" , position:"fixed"}}
+          <img src={istrue ? hoverImage : initialImg} alt={Name} />
+          <p
+            className="p-name"
+            style={{ display: isHovered ? "block" : "none" }}
           >
             {fullName}
           </p>
