@@ -8,7 +8,9 @@ const Wrapper = styled.article`
     font-weight: normal;
     font-size: 20px;
   }
+
   .header h3 {
+    margin: -18px 0 0 0;
     position: fixed;
     left: 0;
   }
@@ -18,7 +20,7 @@ const Wrapper = styled.article`
     justify-content: center;
     align-items: center;
   }
-  .main-header h3:hover{
+  .main-header h3:hover {
     color: red;
   }
   .main-header a {
@@ -38,10 +40,10 @@ const Wrapper = styled.article`
   .main-header nav ul li:hover {
     color: red;
   }
-  .main-header nav ul li{
+  .main-header nav ul li {
     cursor: pointer;
   }
-  .color-red{
+  .color-red {
     color: red;
   }
 

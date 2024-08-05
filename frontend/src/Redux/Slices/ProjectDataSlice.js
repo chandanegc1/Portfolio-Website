@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { arr1 } from "../../utils/constants";
 
-let arr=[];
 const cartSlice = createSlice({
   name: "cart",
   initialState: arr1.sort((a,b)=> a.data.location.localeCompare(b.data.location)), 
@@ -13,7 +12,6 @@ const cartSlice = createSlice({
           break;
         case 'STATUS':
           state.sort((a, b) => a.data.status.localeCompare(b.data.status));
-         
           break; 
         case 'LOCATION':
           state.sort((a, b) => a.data.location.localeCompare(b.data.location));
@@ -33,5 +31,4 @@ const cartSlice = createSlice({
 });
 
 export const { sortItems} = cartSlice.actions;
-
 export default cartSlice.reducer;

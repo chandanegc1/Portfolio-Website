@@ -1,7 +1,6 @@
-import React, { useContext} from "react";
+import React from "react";
 import NavBarBottom from "../components/LandingPage/NavBarBottom";
-import Wrapper from "../styles/Projects";
-
+import Wrapper from "../styles/LandingPage";
 import { useSelector } from "react-redux";
 import IconGroup from "../components/LandingPage/IconGroup";
 

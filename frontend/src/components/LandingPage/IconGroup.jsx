@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import Icons from './Icons';
-import Wrapper from '../../styles/IconGroup';
-import { useNavigate } from 'react-router-dom';
-
+import React from "react";
+import Icons from "./Icons";
+import Wrapper from "../../styles/IconGroup";
+import { useNavigate } from "react-router-dom";
 
 const IconGroup = ({ Name, arr }) => {
   const navigate = useNavigate();
@@ -10,13 +9,13 @@ const IconGroup = ({ Name, arr }) => {
     <Wrapper>
       <div className="destop-content">
         <div className="icon-group">
-          <h3  >{Name}</h3>
+          <h3>{Name}</h3>
           <div className="box-icon">
-            {arr.map((item,index) => (
+            {arr.map((item, index) => (
               <div
                 key={index}
                 className="icon-click"
-                onClick={() => navigate('/project', { state: { item } })}
+                onClick={() => navigate("/project", { state: { item } })}
               >
                 <Icons
                   hoverImage={item.hoverImage}
@@ -34,4 +33,4 @@ const IconGroup = ({ Name, arr }) => {
   );
 };
 
-export default IconGroup; 
+export default IconGroup;
