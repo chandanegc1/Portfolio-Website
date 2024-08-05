@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { arr1 } from "../../utils/constants";
 
-const cartSlice = createSlice({
+const projectSlice = createSlice({
   name: "cart",
   initialState: arr1.sort((a,b)=> a.data.location.localeCompare(b.data.location)), 
   reducers: {
@@ -30,5 +30,5 @@ const cartSlice = createSlice({
   }
 });
 
-export const { sortItems} = cartSlice.actions;
-export default cartSlice.reducer;
+export const { sortItems} = projectSlice.actions;
+export default projectSlice.reducer;

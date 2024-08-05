@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import IconGroup from "../components/LandingPage/IconGroup";
 
 const LandingPage = () => {
-  const project = useSelector((state) => state.cart);
+  const project = useSelector((state) => state.project);
   const path = useSelector(state=>state.path);
   let newPath = path;
   if(newPath==="CHRONOLOGICAL") newPath = "year";
