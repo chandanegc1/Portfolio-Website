@@ -1,42 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
-const App = () => {
-  const [icons, setIcons] = useState([]);
-  const [positions, setPositions] = useState([]);
-  useEffect(() => {
-    // Initialize icons and positions
-    const initialIcons = Array.from({ length: 50 }, (_, i) => i + 1);
-    setIcons(initialIcons);
-    setPositions(initialIcons);
-  }, []);
+import Icons from '../components/LandingPage/Icons';
 
-  const shuffleIcons = () => {
-    const shuffledPositions = [...positions].sort(() => Math.random() - 0.5);
-    setPositions(shuffledPositions); 
-  };
-
+const App = ({ arr, rowindex, Name }) => {
   return (
     <div className="App">
-      {/* <h1>{items} eireo</h1> */}
+      <p>{Name}</p>
       <div className="icon-container">
-        {icons.map((icon, index) => {
-          const position = positions.indexOf(icon);
-          const row = Math.floor(position / 10);
-          const col = position % 10;
+        {arr.map((item, index) => {
+          let id = item.id;
+          const row = Math.floor(index / rowindex); 
+          const col = index % rowindex;
           return (
             <div
-              key={icon}
+              key={item.data.year-index%id}
               className="icon"
               style={{
-                transform: `translate(${col * 60}px, ${row * 60}px)`,
+                transform: `translate(${row * 100}px, ${col * 60}px) `,
+                transition: 'transform 0.5s ease',
+                willChange: 'transform', 
               }}
             >
-              {icon}
+              <Icons
+                hoverImage={item.hoverImage}
+                initialImg={item.initialImg}
+                Name={item.name}
+                fullName={item.data.name}
+                Link={item.link}
+                index={index}
+              />
             </div>
           );
         })}
       </div>
-      <button onClick={shuffleIcons}>Shift Icons</button>
     </div>
   );
 };

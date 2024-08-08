@@ -3,38 +3,40 @@ import NavBarBottom from "../components/LandingPage/NavBarBottom";
 import Wrapper from "../styles/LandingPage";
 import { useSelector } from "react-redux";
 import IconGroup from "../components/LandingPage/IconGroup";
+import App from "../testing/Test";
+import { transformTo2DArray } from "../utils/Sortedarray";
 
 const LandingPage = () => {
   const project = useSelector((state) => state.project);
   const path = useSelector(state=>state.path);
-  let newPath = path;
-  if(newPath==="CHRONOLOGICAL") newPath = "year";
-  if(newPath==="RANDOM")  newPath = "location";
-  if(newPath==="LIST-VIEW") newPath = "status";
 
-  let brr = [[]];
-  if (project.length > 0) {
-    brr[0][0] = project[0];
+  let newPath = path;
+  switch(newPath){
+    case "CHRONOLOGICAL":
+      newPath = "year";
+      break;
+    case "RANDOM":
+      newPath = "location"
+      break;
+    case "LIST-VIEW":
+      newPath = "status"
+      break;
+    default:
+      newPath = "location"
   }
-  let j = 0,
-    k = 0;
-  for (let i = 1; i < project.length; i++) {
-    if (project[i - 1].data[newPath.toLowerCase()] !== project[i].data[newPath.toLowerCase()]) {
-      j++;
-      k = 0;
-      brr[j] = [];
-    }
-    brr[j][k] = project[i];
-    k++;
-  }
- 
+  let projects = transformTo2DArray(project, newPath.toLowerCase());
+
   return (
     <Wrapper>
       <div className="full-destop">
         {project &&
-          brr.map((item, index) => (
-            <IconGroup key={index} Name={item[0].data[newPath.toLowerCase()]} arr={brr[index]} />
-          ))}
+          projects.map((item, index) => (
+            <IconGroup key={index}  Name={item[0].data[newPath.toLowerCase()]} projectRow={item} />
+          ))} 
+          {/* {projects &&
+          projects.map((item, index) => (
+            <App rowindex={index} Name={item[0].data[newPath.toLowerCase()]} arr={item} />
+          ))} */}
       </div>
       <div className="navbar">
         <NavBarBottom />

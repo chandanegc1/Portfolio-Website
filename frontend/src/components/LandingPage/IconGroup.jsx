@@ -2,28 +2,24 @@ import React from "react";
 import Icons from "./Icons";
 import Wrapper from "../../styles/IconGroup";
 import { useNavigate } from "react-router-dom";
+import { nanoid } from 'nanoid';
 
-const IconGroup = ({ Name, arr }) => {
+const IconGroup = ({ Name, projectRow }) => {
   const navigate = useNavigate();
+  console.log(projectRow[0]) 
   return (
     <Wrapper>
       <div className="destop-content">
         <div className="icon-group">
           <h3>{Name}</h3>
           <div className="box-icon">
-            {arr.map((item, index) => (
+            {projectRow.map((item) => (
               <div
-                key={index}
+                key={nanoid()}
                 className="icon-click"
                 onClick={() => navigate("/project", { state: { item } })}
               >
-                <Icons
-                  hoverImage={item.hoverImage}
-                  initialImg={item.initialImg}
-                  Name={item.name}
-                  fullName={item.data.name}
-                  Link={item.link}
-                />
+                <Icons data={item} />
               </div>
             ))}
           </div>

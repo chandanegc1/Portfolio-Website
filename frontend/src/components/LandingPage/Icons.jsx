@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Wrapper from "../../styles/Icons";
 
-const Icons = ({ initialImg, hoverImage, Name, fullName }) => {
+const Icons = (data) => {
+  console.log(data);
+  const { initialImg, hoverImage, name} = data.data;
+  let fullname = data.data.data.name;
   const [isHovered, setIsHovered] = useState(false);
   const [istrue, setIsTrue] = useState(false);
   const handleMouseEnter = () => {
@@ -14,7 +17,7 @@ const Icons = ({ initialImg, hoverImage, Name, fullName }) => {
     setIsTrue(!istrue);
   };
 
-  return (
+  return ( 
     <Wrapper>
       <div className="main-box">
         <div
@@ -22,15 +25,15 @@ const Icons = ({ initialImg, hoverImage, Name, fullName }) => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <img src={istrue ? hoverImage : initialImg} alt={Name} />
+          <img src={istrue ? hoverImage : initialImg} alt={name} />
           <p
             className="p-name"
             style={{ display: isHovered ? "block" : "none" }}
           >
-            {fullName}
+            {fullname}
           </p>
         </div>
-        <p>{Name}</p>
+        <p>{name}</p>
       </div>
     </Wrapper>
   );

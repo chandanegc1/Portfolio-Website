@@ -3,7 +3,9 @@ const Wrapper = styled.article`
 *{
   font-family: "Agency FB", sans-serif;
 }
-
+.main-box{
+  /* position:absolute; */
+}
   .main-box .box img {
     width: 45px;
     height: 45px;

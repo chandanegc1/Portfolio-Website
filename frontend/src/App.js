@@ -7,6 +7,7 @@ import Test from './testing/Test';
 
 import "./styles/index.css";
 import "./styles/font/font.css"
+import AnimatedGrid from './testing/test2';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/information" element={<Information />}>
       </Route>
       <Route path="/test" element={<Test />}/>
+      <Route path="/test2" element={<AnimatedGrid />}/>
       </Routes>
     </Router>
   );

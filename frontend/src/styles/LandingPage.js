@@ -56,5 +56,6 @@ const Wrapper = styled.article`
     bottom: 20px;
     position: fixed;
   }
+  
 `;
 export default Wrapper;

@@ -10,7 +10,7 @@ const Wrapper = styled.article`
   }
 
   .header h3 {
-    margin: -18px 0 0 0;
+    margin: -12px 0  0 20px;
     position: fixed;
     left: 0;
   }

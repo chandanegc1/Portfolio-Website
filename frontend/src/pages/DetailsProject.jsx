@@ -1,43 +1,42 @@
 import { useLocation, Link } from "react-router-dom";
+import React, { useState } from "react";
 import Wrapper from "../styles/DetailsProject";
 import ImageSlider from "../components/ImageSlider";
-import { useState} from "react";
 
-const Project = () => {
+const DetailsProject = () => {
   const location = useLocation();
-  const item = location.state.item;
-  const [istrue, setIstrue] = useState(true);
+  const { item } = location.state;
+  const [isPopupVisible, setPopupVisible] = useState(true);
 
-  function handleClick() {
-    setIstrue(!istrue);
+  function togglePopup() {
+    setPopupVisible(!isPopupVisible);
   }
 
   return (
     <Wrapper>
-      {istrue ? (
-        <div className={"pop-up"}>
+      {isPopupVisible ? (
+        <div className="pop-up">
           <div className="cancel-btn">
             <Link to="/">
-              {istrue ? <h1 onClick={handleClick}>X</h1> : null}
+              {isPopupVisible ? <p onClick={togglePopup}>x</p> : null}
             </Link>
           </div>
           <div className="cancel-btn btn2">
-            {istrue ? <h1 onClick={handleClick}>{">"}</h1> : null}
+            {isPopupVisible ? <h1 onClick={togglePopup}>{">"}</h1> : null}
           </div>
           <div className="project">
             <div className="project-left">
               <div className="product-details">
                 <div className="details">
                   <h4>PROJECT DETAILS</h4>
-                  <br />
-                  <br />
+                  <br /><br />
                   <Link to="/">
                     <img src={item.initialImg} alt="" className="logo" />
                   </Link>
                   <p>{item.name}</p>
                   <br />
                   <p>
-                    Name: <b>{item.data.name}</b>
+                    NAME: <b>{item.data.name}</b>
                   </p>
                   <p>
                     CATEGORY: <b>{item.data.category}</b>
@@ -66,11 +65,11 @@ const Project = () => {
         </div>
       ) : (
         <div className="slide-left">
-          <ImageSlider backBtn={handleClick} item={item} />
+          <ImageSlider backBtn={togglePopup} item={item} />
         </div>
       )}
     </Wrapper>
   );
 };
 
-export default Project;
+export default DetailsProject;

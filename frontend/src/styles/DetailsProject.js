@@ -19,15 +19,13 @@ const Wrapper = styled.article`
     right: 2px;
     background-color: white;
   }
-
-  .cancel-btn h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
+  .cancel-btn p {
+    padding: 0px 5px;
+    padding-bottom: 3px;
+    font-size: 30px;
     color: black;
     cursor: pointer;
   }
-
   .page-nav {
     position: fixed;
     bottom: 20px;
@@ -41,7 +39,7 @@ const Wrapper = styled.article`
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    min-width: 00px;
+    min-width: 0;
     height: 300px;
     font-family: "Agency FB Bold";
     font-weight: normal;
@@ -73,8 +71,8 @@ const Wrapper = styled.article`
     text-decoration: none;
   }
   .product-desc {
-    padding: 20px 5px;
-    margin: 8px 0;
+    padding: 20px 0px;
+    padding-right: 25px;
     font-family: "Agency FB", sans-serif;
   }
 

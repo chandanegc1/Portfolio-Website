@@ -12,23 +12,24 @@ import Staff from '../components/InformationPage/Staff';
 import Jobs from '../components/InformationPage/Jobs';
 import Wrapper from '../styles/Information';
 import Search from '../components/InformationPage/Search';
+
 const Information = () => {
   return (
     <Wrapper>
       <InfoNavBar />
 
       <div style={{ paddingLeft: '190px', paddingTop: '10px' }}>
-        <News/>
-        <About  />
-        <BigIdea  />
-        <Lectures/>
-        <Shop/>
-        <Media/>
+        <News />
+        <About />
+        <BigIdea />
+        <Lectures />
+        <Shop />
+        <Media />
         <Awards />
-        <Jobs/>
-        <Staff/>
-        <Search/>
-        <FeedBack/>
+        <Jobs />
+        <Staff />
+        <Search />
+        <FeedBack />
       </div>
     </Wrapper>
   );
