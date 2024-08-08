@@ -22,7 +22,7 @@ const LandingPage = () => {
       newPath = "status"
       break;
     default:
-      newPath = "location"
+      break;
   }
   let projects = transformTo2DArray(project, newPath.toLowerCase());
 
