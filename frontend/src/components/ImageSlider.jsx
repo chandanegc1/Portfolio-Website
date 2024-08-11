@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Wrapper from "../styles/ImageSlider";
+import {ArrowBack} from "./common/icons/ArrowBack";
+import { ArrowForward } from "./common/icons/ArrowForward";
 
 const ImageSlider = ({item , backBtn}) => {
     const [counter, setCounter] = useState(0);
@@ -39,10 +41,10 @@ const ImageSlider = ({item , backBtn}) => {
             <img src={item.data.img[3]} alt="" className="slid" />
             <img src={item.data.img[4]} alt="" className="slid" />
             <div className="button prev-button" onClick={!counter==0?prev:backBtn}>
-            {"<<"}
+            <ArrowBack fontSize="large"/>
             </div>
             <div className="button next-button" onClick={next}>
-            {">>"}
+           <ArrowForward fontSize="large" />
             </div>
           </div>
     </Wrapper>

@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import React, { useState } from "react";
 import Wrapper from "../styles/DetailsProject";
 import ImageSlider from "../components/ImageSlider";
+import { ArrowBack } from "../components/common/icons/ArrowBack";
 
 const DetailsProject = () => {
   const location = useLocation();
@@ -22,7 +23,9 @@ const DetailsProject = () => {
             </Link>
           </div>
           <div className="cancel-btn btn2">
-            {isPopupVisible ? <h1 onClick={togglePopup}>{">"}</h1> : null}
+            {isPopupVisible ? <h1 onClick={togglePopup}>
+              <ArrowBack fontSize={"large"} />
+            </h1> : null}
           </div>
           <div className="project">
             <div className="project-left">
