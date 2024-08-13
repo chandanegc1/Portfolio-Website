@@ -12,12 +12,13 @@ const Wrapper = styled.article`
     z-index: 10;
     padding: 0 5px;
     text-decoration: none;
-    background-color: aliceblue;
+    background-color: none;
   }
   .btn2 {
     top: 50vh;
     right: 2px;
     background-color: white;
+    cursor: pointer;
   }
   .cancel-btn p {
     padding: 0px 5px;

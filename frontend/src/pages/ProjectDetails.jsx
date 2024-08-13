@@ -1,8 +1,9 @@
 import { useLocation, Link } from "react-router-dom";
 import React, { useState } from "react";
-import Wrapper from "../styles/DetailsProject";
+import Wrapper from "../styles/ProjectDetails";
 import ImageSlider from "../components/ImageSlider";
 import { ArrowBack } from "../components/common/icons/ArrowBack";
+import CancelIcon from "@mui/icons-material/Cancel";
 
 const DetailsProject = () => {
   const location = useLocation();
@@ -19,20 +20,27 @@ const DetailsProject = () => {
         <div className="pop-up">
           <div className="cancel-btn">
             <Link to="/">
-              {isPopupVisible ? <p onClick={togglePopup}>x</p> : null}
+              {isPopupVisible ? (
+                <p onClick={togglePopup}>
+                  <CancelIcon fontSize="large" />
+                </p>
+              ) : null}
             </Link>
           </div>
           <div className="cancel-btn btn2">
-            {isPopupVisible ? <h1 onClick={togglePopup}>
-              <ArrowBack fontSize={"large"} />
-            </h1> : null}
+            {isPopupVisible ? (
+              <h1 onClick={togglePopup}>
+                <ArrowBack fontSize={"large"} />
+              </h1>
+            ) : null}
           </div>
           <div className="project">
             <div className="project-left">
               <div className="product-details">
                 <div className="details">
                   <h4>PROJECT DETAILS</h4>
-                  <br /><br />
+                  <br />
+                  <br />
                   <Link to="/">
                     <img src={item.initialImg} alt="" className="logo" />
                   </Link>

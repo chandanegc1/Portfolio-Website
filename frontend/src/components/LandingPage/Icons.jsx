@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Wrapper from "../../styles/Icons";
+import { useSelector } from "react-redux";
 
 const Icons = (data) => {
-  console.log(data);
-  const { initialImg, hoverImage, name} = data.data;
+  const { initialImg, hoverImage, name } = data.data;
   let fullname = data.data.data.name;
+  const path = useSelector((state) => state.path);
+  console.log(path);
   const [isHovered, setIsHovered] = useState(false);
   const [istrue, setIsTrue] = useState(false);
   const handleMouseEnter = () => {
@@ -17,23 +19,30 @@ const Icons = (data) => {
     setIsTrue(!istrue);
   };
 
-  return ( 
+  return (
     <Wrapper>
-      <div className="main-box">
+      <div className={path!="LIST-VIEW" ? "main-box": "main-box-list"}>
         <div
           className="box"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
           <img src={istrue ? hoverImage : initialImg} alt={name} />
-          <p
-            className="p-name"
-            style={{ display: isHovered ? "block" : "none" }}
-          >
-            {fullname}
-          </p>
+          <div className="name">
+            <p className="logo-name"
+             style={{ display: path=="LIST-VIEW" ? "block" : "none" }}
+            >{name}</p>
+            <p
+              className="p-name"
+              style={{ display: isHovered || path=="LIST-VIEW" ? "block" : "none" }}
+            >
+              {fullname}
+            </p>
+          </div>
         </div>
-        <p>{name}</p>
+        <p className="logo-name"
+          style={{ display: path!="LIST-VIEW" ? "block" : "none" }}
+        >{name}</p>
       </div>
     </Wrapper>
   );

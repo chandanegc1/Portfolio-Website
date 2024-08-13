@@ -32,6 +32,29 @@ const Wrapper = styled.article`
     margin-top: -5px;
     color: rgb(118, 117, 117);
   }
+
+  .main-box-list .box img {
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    transition: transform 0.3s;
+  }
+  .main-box-list .logo-name {
+    font-size: 12px;
+    text-align: left;
+    color: rgb(118, 117, 117);
+  }
+  .main-box-list .box{
+    display: flex;
+    width: 240px;
+    margin: 2px 0;
+  }
+  .main-box-list .box .p-name{
+    display: block;
+    position: none;
+    font-size: 14px;
+    text-align: left;
+  }
 `;
 
 export default Wrapper;

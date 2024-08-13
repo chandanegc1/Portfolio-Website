@@ -6,7 +6,6 @@ import { nanoid } from 'nanoid';
 
 const IconGroup = ({ Name, projectRow }) => {
   const navigate = useNavigate();
-  console.log(projectRow[0]) 
   return (
     <Wrapper>
       <div className="destop-content">

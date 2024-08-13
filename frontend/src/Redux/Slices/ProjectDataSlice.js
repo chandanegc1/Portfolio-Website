@@ -10,20 +10,19 @@ const projectSlice = createSlice({
         case 'CHRONOLOGICAL':
           state.sort((a, b) => a.data.year - b.data.year);
           break;
+          case 'TYPOLOGY':
+            state.sort((a, b) => a.data.category.localeCompare(b.data.category));
+            break; 
         case 'STATUS':
           state.sort((a, b) => a.data.status.localeCompare(b.data.status));
           break; 
+        // case 'TECHNOLOGY':  waiting for data to be added
+        //   state.sort((a, b) => a.data.technology.localeCompare(b.data.technology));
+        //   break; 
         case 'LOCATION':
           state.sort((a, b) => a.data.location.localeCompare(b.data.location));
           break;
-        case 'LIST-VIEW':
-          state.sort((a, b) => a.data.status.localeCompare(b.data.status));
-          break;
-        case 'RANDOM':
-          state.sort((a, b) => a.data.location.localeCompare(b.data.location));
-          break;
         default:
-          state.sort((a, b) => a.data.location.localeCompare(b.data.location));
           break;
       }
     },

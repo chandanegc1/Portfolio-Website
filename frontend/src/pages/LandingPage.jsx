@@ -3,7 +3,6 @@ import NavBarBottom from "../components/LandingPage/NavBarBottom";
 import Wrapper from "../styles/LandingPage";
 import { useSelector } from "react-redux";
 import IconGroup from "../components/LandingPage/IconGroup";
-import App from "../testing/Test";
 import { transformTo2DArray } from "../utils/Sortedarray";
 
 const LandingPage = () => {
@@ -15,28 +14,21 @@ const LandingPage = () => {
     case "CHRONOLOGICAL":
       newPath = "year";
       break;
-    case "RANDOM":
-      newPath = "location"
-      break;
-    case "LIST-VIEW":
-      newPath = "status"
+    case "TYPOLOGY":
+      newPath = "category";
       break;
     default:
       break;
   }
   let projects = transformTo2DArray(project, newPath.toLowerCase());
-
   return (
     <Wrapper>
       <div className="full-destop">
         {project &&
           projects.map((item, index) => (
             <IconGroup key={index}  Name={item[0].data[newPath.toLowerCase()]} projectRow={item} />
-          ))} 
-          {/* {projects &&
-          projects.map((item, index) => (
-            <App rowindex={index} Name={item[0].data[newPath.toLowerCase()]} arr={item} />
-          ))} */}
+          ))
+        } 
       </div>
       <div className="navbar">
         <NavBarBottom />

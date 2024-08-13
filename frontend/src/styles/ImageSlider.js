@@ -7,6 +7,11 @@ const Wrapper = styled.article`
     position: absolute;
     overflow: hidden;
   }
+  .product-img .cancel-btn{
+    right:10px;
+    top:10px;
+    possition:fixed;
+  }
   .slid {
     width: 100%;
     height: 100%;
@@ -16,9 +21,8 @@ const Wrapper = styled.article`
   .button {
     position: absolute;
     top: 50%;
-    color: white;
+    color: black;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
