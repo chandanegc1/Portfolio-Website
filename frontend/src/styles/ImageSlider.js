@@ -11,6 +11,7 @@ const Wrapper = styled.article`
     right:10px;
     top:10px;
     possition:fixed;
+    
   }
   .slid {
     width: 100%;
@@ -26,6 +27,8 @@ const Wrapper = styled.article`
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.300);
+    padding:5px 0;
   }
   .prev-button {
     left: 0px;

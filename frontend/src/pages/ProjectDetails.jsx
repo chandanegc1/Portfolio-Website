@@ -4,6 +4,7 @@ import Wrapper from "../styles/ProjectDetails";
 import ImageSlider from "../components/ImageSlider";
 import { ArrowBack } from "../components/common/icons/ArrowBack";
 import CancelIcon from "@mui/icons-material/Cancel";
+import { ArrowForward } from "../components/common/icons/ArrowForward";
 
 const DetailsProject = () => {
   const location = useLocation();
@@ -30,7 +31,7 @@ const DetailsProject = () => {
           <div className="cancel-btn btn2">
             {isPopupVisible ? (
               <h1 onClick={togglePopup}>
-                <ArrowBack fontSize={"large"} />
+                <ArrowForward fontSize={"large"} />
               </h1>
             ) : null}
           </div>

@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 const Wrapper = styled.article`
   .project {
-    margin-top: 60px;
+    margin-top: 70px;
     display: flex;
   }
   .cancel-btn {
     position: fixed;
-    top: -45px;
+    top: -50px;
     right: 15px;
     z-index: 10;
     padding: 0 5px;
@@ -15,13 +15,16 @@ const Wrapper = styled.article`
     background-color: none;
   }
   .btn2 {
-    top: 50vh;
-    right: 2px;
-    background-color: white;
+    top: 45vh;
+    right: 5px;
+    color:black;
+    border-radius:8px;
+    padding:8px 0 0 0;
+    background-color: rgba(128, 128, 128, 0.400);
     cursor: pointer;
   }
   .cancel-btn p {
-    padding: 0px 5px;
+    padding: 0px 4px;
     padding-bottom: 3px;
     font-size: 30px;
     color: black;
@@ -39,8 +42,8 @@ const Wrapper = styled.article`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    min-width: 0;
+    padding: 0 10px;
+    min-width: 10vw; 
     height: 300px;
     font-family: "Agency FB Bold";
     font-weight: normal;
@@ -62,7 +65,7 @@ const Wrapper = styled.article`
     max-width: 1400px;
   }
   .banner {
-    width: 1400px;
+    width: 80vw;
     height: 100%;
     max-height: 300px;
     cursor: pointer;
@@ -72,11 +75,9 @@ const Wrapper = styled.article`
     text-decoration: none;
   }
   .product-desc {
-    padding: 20px 0px;
-    padding-right: 25px;
+    padding: 20px 35px 20px  0;
     font-family: "Agency FB", sans-serif;
   }
-
   @media (min-width: 768px) {
     .project {
       flex-direction: row;
