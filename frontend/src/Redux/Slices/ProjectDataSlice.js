@@ -3,7 +3,7 @@ import { arr1 } from "../../utils/constants";
 
 const projectSlice = createSlice({
   name: "cart",
-  initialState: arr1.sort((a,b)=> a.data.location.localeCompare(b.data.location)), 
+  initialState: arr1.sort((a,b)=> a.data.year.localeCompare(b.data.year)), 
   reducers: {
     sortItems: (state, action) => {
       switch (action.payload) {
